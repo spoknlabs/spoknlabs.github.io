@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FAQ — SpoknLabs</title>
+  <meta name="description" content="Frequently asked questions about SpoknLabs apps.">
+  <link rel="canonical" href="https://spoknlabs.github.io/faq/">
+  <meta name="theme-color" content="#0A0B0F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="FAQ — SpoknLabs">
+  <meta property="og:description" content="Frequently asked questions about SpoknLabs apps.">
+  <meta property="og:url" content="https://spoknlabs.github.io/faq/">
+  <meta property="og:image" content="https://spoknlabs.github.io/assets/images/og-default.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="SpoknLabs home">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>SpoknLabs</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#apps">Apps</a>
+        <a href="/support/">Support</a>
+        <a href="/faq/" aria-current="page">FAQ</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" style="padding-block: clamp(56px, 10vw, 100px);">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <span class="eyebrow">FAQ</span>
+        <h1 style="margin-top: 14px;">Answers to the usual questions.</h1>
+        <p class="lede">If yours isn't here, the <a href="/support/" style="color: var(--signal); text-decoration: underline; text-underline-offset: 3px;">support page</a> has our email.</p>
+      </div>
+    </section>
+
+    <section style="padding-block: 0 80px;">
+      <div class="container" style="max-width: 760px;">
+        <span class="eyebrow">About Spokn</span>
+        <h2 style="margin-top: 12px; margin-bottom: 24px;">Spokn</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Does Spokn work offline?</summary>
+            <div class="faq-body">Yes. Set the transcription mode to <strong>Local only</strong> (or leave it on <strong>Auto</strong>, which uses the on-device engine when you have no network). Audio never leaves your iPhone in either of those paths.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do I need an OpenAI API key?</summary>
+            <div class="faq-body">Only if you want to use the OpenAI engine. In <strong>Local only</strong> mode, Spokn uses an on-device model and needs no key. If you're in <strong>Auto</strong> or <strong>Online only</strong> mode, you'll add a key in Settings, and it's used directly against OpenAI's API.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Where is my API key stored?</summary>
+            <div class="faq-body">In the iOS Keychain, on your device. Spokn uses it as the Bearer token on transcription requests and never transmits or inspects it otherwise.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Does Spokn record or save my audio?</summary>
+            <div class="faq-body">Audio is written to a temporary file only while recording, then deleted the moment the transcript is delivered (or the attempt is abandoned). Transcripts live in memory for the session. There is no server and no database. See the <a href="/privacy/">Privacy Policy</a> for specifics.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Is there a subscription?</summary>
+            <div class="faq-body">No. Spokn is a one-time purchase. If you use the OpenAI engine, your usage is billed directly to your own OpenAI account — we don't see or touch that.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Can I use Spokn for professional work?</summary>
+            <div class="faq-body">It's fine for everyday use — meeting notes, emails, code comments, captions. We don't recommend relying on it for legal, medical, or safety-critical transcription. See the <a href="/terms/">Terms of Service</a>.</div>
+          </details>
+          <details class="faq-item">
+            <summary>How do I uninstall Spokn and remove all data?</summary>
+            <div class="faq-body">Delete the app from your iPhone. iOS removes the app's Keychain entries, UserDefaults, and any downloaded on-device model along with it. There's no server-side account to delete.</div>
+          </details>
+        </div>
+
+        <span class="eyebrow" style="margin-top: 56px; display: inline-block;">About SpoknLabs</span>
+        <h2 style="margin-top: 12px; margin-bottom: 24px;">The studio</h2>
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>Who makes SpoknLabs apps?</summary>
+            <div class="faq-body">SpoknLabs is a small indie studio. We build native apps for Apple platforms and ship on our own schedule.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Do you run a mailing list?</summary>
+            <div class="faq-body">No regular newsletter. If you email us asking to be notified about a specific app, we'll keep you on a short list and send a single note when it's out.</div>
+          </details>
+          <details class="faq-item">
+            <summary>Are your apps open source?</summary>
+            <div class="faq-body">Not currently. Reach out if you have a specific interest — we're open to conversations.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>© SpoknLabs</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/apps/spokn/">Spokn</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

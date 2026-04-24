@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Privacy Policy — Spokn | SpoknLabs</title>
+  <meta name="description" content="Privacy policy for the Spokn iOS dictation app.">
+  <link rel="canonical" href="https://spoknlabs.github.io/privacy/">
+  <meta name="theme-color" content="#0A0B0F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Privacy Policy — Spokn">
+  <meta property="og:description" content="Privacy policy for the Spokn iOS dictation app.">
+  <meta property="og:url" content="https://spoknlabs.github.io/privacy/">
+  <meta property="og:image" content="https://spoknlabs.github.io/assets/images/og-default.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="SpoknLabs home">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>SpoknLabs</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#apps">Apps</a>
+        <a href="/support/">Support</a>
+        <a href="/faq/">FAQ</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container doc">
+      <span class="eyebrow">Spokn · Privacy Policy</span>
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 24, 2026</p>
+
+      <p>This policy covers <strong>Spokn</strong>, the iOS dictation app from SpoknLabs. Other SpoknLabs apps, if any, have their own privacy pages.</p>
+
+      <nav class="doc-toc" aria-label="Table of contents">
+        <span class="eyebrow">On this page</span>
+        <ul>
+          <li><a href="#what-spokn-processes">What Spokn processes</a></li>
+          <li><a href="#where-processing-happens">Where processing happens</a></li>
+          <li><a href="#purpose">Purpose</a></li>
+          <li><a href="#retention">Retention &amp; deletion</a></li>
+          <li><a href="#third-parties">Third-party processors</a></li>
+          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="what-spokn-processes">What Spokn processes</h2>
+      <ul>
+        <li><strong>Audio recordings</strong> captured via the microphone when you dictate.</li>
+        <li><strong>Transcription text</strong> returned from the configured engine.</li>
+        <li><strong>Vocabulary hint</strong> — an optional text field of domain terms you save in Settings. It's passed to the transcription engine as a prompt to improve accuracy.</li>
+        <li><strong>Language preference</strong> — an optional ISO-639-1 code you pick in Settings.</li>
+      </ul>
+
+      <h2 id="where-processing-happens">Where processing happens</h2>
+      <p>Spokn v3+ runs in one of three modes, user-selectable in Settings:</p>
+      <ul>
+        <li><strong>Auto (default).</strong> Transcribe with OpenAI when the device is online; on-device (WhisperKit) when offline.</li>
+        <li><strong>Online only.</strong> Always transcribe with OpenAI.</li>
+        <li><strong>Local only.</strong> Always transcribe on-device. Audio never leaves your iPhone.</li>
+      </ul>
+      <p>When a recording is transcribed via OpenAI, the audio and any vocabulary hint / language fields are sent to OpenAI's <code>/v1/audio/transcriptions</code> API using <em>your own API key</em>. When a recording is transcribed locally, nothing leaves the device.</p>
+
+      <h2 id="purpose">Purpose</h2>
+      <ul>
+        <li>Provide the core dictation service — speech to clipboard text.</li>
+        <li>No analytics, telemetry, or marketing processing.</li>
+      </ul>
+
+      <h2 id="retention">Retention &amp; deletion</h2>
+      <ul>
+        <li>Audio files are <strong>temporary</strong> — written to the app's temp directory during recording and deleted immediately after the transcript is delivered or after a failed attempt is abandoned.</li>
+        <li>Transcripts are held <strong>in memory only</strong> for the duration of the app session plus the most recent one (shown in the in-app "Copy again" card). They are not archived, synced, or written to persistent storage.</li>
+        <li>No user accounts. No server-side records. Spokn has no backend.</li>
+        <li>Your OpenAI API key is stored locally in the <strong>iOS Keychain</strong>. Spokn does not transmit or inspect it beyond using it as the Bearer token in the transcription request.</li>
+      </ul>
+
+      <h2 id="third-parties">Third-party processors</h2>
+      <ul>
+        <li><strong>OpenAI</strong> — only when Online mode is active or Auto mode routes online. Audio and text fields are sent as documented in OpenAI's API reference. Retention and use are governed by <a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI's own API data policies</a> (API data is not used to train models by default).</li>
+      </ul>
+
+      <h2 id="your-rights">Your rights</h2>
+      <ul>
+        <li>Because Spokn holds no server-side data, there's no account to delete. Uninstalling the app removes all local state — Keychain entries, UserDefaults, and any downloaded on-device model.</li>
+        <li>To revoke the OpenAI path, delete your API key in Settings. To revoke the on-device path, delete any downloaded model in Settings.</li>
+      </ul>
+
+      <h2 id="contact">Contact</h2>
+      <p>Questions about privacy? Email <a href="mailto:hello@spoknlabs.com">hello@spoknlabs.com</a>. See the <a href="/support/">Support page</a> for more ways to get in touch.</p>
+
+      <p style="margin-top: 48px; font-size: 13px; color: var(--text-faint);">This page will be updated when the Spokn app's data practices change. Material changes will be reflected in the "Last updated" date above.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>© SpoknLabs</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/apps/spokn/">Spokn</a>
+        <a href="/privacy/" aria-current="page">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

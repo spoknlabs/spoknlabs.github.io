@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://spoknlabs.github.io/sitemap.xml
