@@ -98,11 +98,11 @@
         <li><strong>Local engine.</strong> Audio is transcribed on your device using an open-source <a href="https://github.com/argmaxinc/WhisperKit" rel="noopener">WhisperKit</a> model. <strong>No audio leaves your device</strong> on this path. No network connection is required.</li>
         <li><strong>OpenAI engine.</strong> Audio and any vocabulary hint / language code are sent over HTTPS directly from your device to OpenAI's <code>/v1/audio/transcriptions</code> endpoint, using <em>your own</em> OpenAI API key as the bearer token. Spokn is not in the middle of this request — it goes straight to OpenAI.</li>
       </ul>
-      <p>Depending on the platform and version, Spokn exposes one or both of these as a user-selectable mode:</p>
+      <p>On both Spokn for iPhone and Spokn for Mac, you choose between three modes in Settings:</p>
       <ul>
-        <li><strong>Spokn for Mac:</strong> three modes — <em>Auto</em> (OpenAI when online, on-device when offline), <em>Online only</em>, and <em>Local only</em>.</li>
-        <li><strong>Spokn for iPhone (v3.0 and later):</strong> the same three modes.</li>
-        <li><strong>Earlier versions of Spokn for iPhone</strong> only ship the OpenAI engine; if you're running one of those, every transcription is processed by OpenAI as described above. Updating to v3 unlocks the on-device path.</li>
+        <li><strong>Auto</strong> — OpenAI when your device is online, on-device when offline.</li>
+        <li><strong>Online only</strong> — always uses OpenAI.</li>
+        <li><strong>Local only</strong> — always on-device. No audio ever leaves your device.</li>
       </ul>
       <p>The mode you pick is the only thing that decides whether audio leaves your device. There is no "phone home" channel.</p>
 
