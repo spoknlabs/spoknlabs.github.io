@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Privacy Policy — Spokn | SpoknLabs</title>
-  <meta name="description" content="Privacy policy for the Spokn iOS dictation app.">
+  <meta name="description" content="Privacy policy for the Spokn dictation app, covering iPhone and Mac.">
   <link rel="canonical" href="https://spoknlabs.github.io/privacy/">
   <meta name="theme-color" content="#0A0B0F" media="(prefers-color-scheme: dark)">
   <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
@@ -12,7 +12,7 @@
 
   <meta property="og:type" content="article">
   <meta property="og:title" content="Privacy Policy — Spokn">
-  <meta property="og:description" content="Privacy policy for the Spokn iOS dictation app.">
+  <meta property="og:description" content="Privacy policy for the Spokn dictation app, covering iPhone and Mac.">
   <meta property="og:url" content="https://spoknlabs.github.io/privacy/">
   <meta property="og:image" content="https://spoknlabs.github.io/assets/images/og-default.svg">
 
@@ -48,69 +48,122 @@
     <article class="container doc">
       <span class="eyebrow">Spokn · Privacy Policy</span>
       <h1>Privacy Policy</h1>
-      <p class="updated">Last updated: April 24, 2026</p>
+      <p class="updated">Last updated: April 25, 2026</p>
 
-      <p>This policy covers <strong>Spokn</strong>, the iOS dictation app from SpoknLabs. Other SpoknLabs apps, if any, have their own privacy pages.</p>
+      <p>This policy applies to <strong>Spokn</strong>, the dictation app from SpoknLabs, on iPhone and Mac. Where the iPhone and Mac versions behave differently, that's called out explicitly. Other SpoknLabs apps, if any, have their own privacy pages.</p>
+
+      <div class="card" style="margin: 28px 0 8px; background: var(--bg-card-2);">
+        <span class="eyebrow" style="display: inline-block; margin-bottom: 12px;">The short version</span>
+        <ul style="padding-left: 20px; margin: 0; color: var(--text-dim); line-height: 1.65;">
+          <li>SpoknLabs has <strong>no backend, no servers, no accounts</strong>. We never see your audio, your transcripts, or your API key.</li>
+          <li>Audio is processed in one of two ways, your choice: <strong>on your device</strong>, or sent <strong>directly from your device to OpenAI</strong> using your own OpenAI API key. There is nothing in between.</li>
+          <li>We do not run analytics, telemetry, advertising, or crash reporting. Spokn does not include any third-party tracking SDK.</li>
+          <li>Uninstalling Spokn deletes everything Spokn stored locally.</li>
+        </ul>
+      </div>
 
       <nav class="doc-toc" aria-label="Table of contents">
         <span class="eyebrow">On this page</span>
         <ul>
+          <li><a href="#scope">Scope</a></li>
           <li><a href="#what-spokn-processes">What Spokn processes</a></li>
-          <li><a href="#where-processing-happens">Where processing happens</a></li>
-          <li><a href="#purpose">Purpose</a></li>
-          <li><a href="#retention">Retention &amp; deletion</a></li>
+          <li><a href="#data-flow">Where your audio goes</a></li>
+          <li><a href="#stored-on-device">What's stored on your device</a></li>
+          <li><a href="#not-collected">What we don't collect</a></li>
           <li><a href="#third-parties">Third-party processors</a></li>
-          <li><a href="#your-rights">Your rights</a></li>
+          <li><a href="#permissions">Permissions Spokn requests</a></li>
+          <li><a href="#your-rights">Your rights &amp; how to delete your data</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </nav>
 
+      <h2 id="scope">Scope</h2>
+      <p>This policy covers the Spokn iOS app and the Spokn macOS app. Both are personal dictation utilities — you press a key, you speak, the transcript lands on your clipboard. There is no SpoknLabs server involved at any point.</p>
+
       <h2 id="what-spokn-processes">What Spokn processes</h2>
+      <p>While you use Spokn, the app handles the following on your device:</p>
       <ul>
-        <li><strong>Audio recordings</strong> captured via the microphone when you dictate.</li>
-        <li><strong>Transcription text</strong> returned from the configured engine.</li>
-        <li><strong>Vocabulary hint</strong> — an optional text field of domain terms you save in Settings. It's passed to the transcription engine as a prompt to improve accuracy.</li>
-        <li><strong>Language preference</strong> — an optional ISO-639-1 code you pick in Settings.</li>
+        <li><strong>Audio recordings</strong> captured via your microphone while you hold the dictation key.</li>
+        <li><strong>Transcribed text</strong> returned by the active transcription engine.</li>
+        <li><strong>Vocabulary hint</strong> — an optional list of names, jargon, or phrases you save in Settings. When the OpenAI engine is active, it is sent alongside your audio so the engine can spell unusual words correctly.</li>
+        <li><strong>Language preference</strong> — an optional ISO-639-1 language code you pick in Settings.</li>
+        <li><strong>Your OpenAI API key</strong>, only when the OpenAI engine is configured. The key is stored on-device in the iOS or macOS Keychain.</li>
       </ul>
 
-      <h2 id="where-processing-happens">Where processing happens</h2>
-      <p>Spokn v3+ runs in one of three modes, user-selectable in Settings:</p>
+      <h2 id="data-flow">Where your audio goes</h2>
+      <p>Spokn supports two transcription engines, accessible from the same Settings screen:</p>
       <ul>
-        <li><strong>Auto (default).</strong> Transcribe with OpenAI when the device is online; on-device (WhisperKit) when offline.</li>
-        <li><strong>Online only.</strong> Always transcribe with OpenAI.</li>
-        <li><strong>Local only.</strong> Always transcribe on-device. Audio never leaves your iPhone.</li>
+        <li><strong>Local engine.</strong> Audio is transcribed on your device using an open-source <a href="https://github.com/argmaxinc/WhisperKit" rel="noopener">WhisperKit</a> model. <strong>No audio leaves your device</strong> on this path. No network connection is required.</li>
+        <li><strong>OpenAI engine.</strong> Audio and any vocabulary hint / language code are sent over HTTPS directly from your device to OpenAI's <code>/v1/audio/transcriptions</code> endpoint, using <em>your own</em> OpenAI API key as the bearer token. Spokn is not in the middle of this request — it goes straight to OpenAI.</li>
       </ul>
-      <p>When a recording is transcribed via OpenAI, the audio and any vocabulary hint / language fields are sent to OpenAI's <code>/v1/audio/transcriptions</code> API using <em>your own API key</em>. When a recording is transcribed locally, nothing leaves the device.</p>
+      <p>Depending on the platform and version, Spokn exposes one or both of these as a user-selectable mode:</p>
+      <ul>
+        <li><strong>Spokn for Mac:</strong> three modes — <em>Auto</em> (OpenAI when online, on-device when offline), <em>Online only</em>, and <em>Local only</em>.</li>
+        <li><strong>Spokn for iPhone (v3.0 and later):</strong> the same three modes.</li>
+        <li><strong>Earlier versions of Spokn for iPhone</strong> only ship the OpenAI engine; if you're running one of those, every transcription is processed by OpenAI as described above. Updating to v3 unlocks the on-device path.</li>
+      </ul>
+      <p>The mode you pick is the only thing that decides whether audio leaves your device. There is no "phone home" channel.</p>
 
-      <h2 id="purpose">Purpose</h2>
+      <h2 id="stored-on-device">What's stored on your device</h2>
       <ul>
-        <li>Provide the core dictation service — speech to clipboard text.</li>
-        <li>No analytics, telemetry, or marketing processing.</li>
+        <li><strong>Your OpenAI API key</strong> is stored in the iOS / macOS <strong>Keychain</strong> (with the standard "after first unlock" protection). Spokn uses it only as the <code>Authorization: Bearer …</code> header on transcription requests, and never inspects, transmits, or logs it elsewhere.</li>
+        <li><strong>Your settings</strong> (transcription mode, model choice, vocabulary hint, language, UI preferences) live in <code>UserDefaults</code> in the app's sandbox.</li>
+        <li><strong>Audio recordings are temporary.</strong> While you dictate, audio is written to the app's temp directory. The file is deleted as soon as the transcript is delivered, or as soon as a failed attempt is abandoned. Audio is never written to your photo library, iCloud, the Files app, or any other persistent location.</li>
+        <li><strong>Transcripts</strong> live in app memory only — long enough to populate the in-app "Copy again" card. They are never archived, synced, or written to persistent storage.</li>
+        <li><strong>On-device transcription model.</strong> If you use the Local engine, Spokn downloads an open-source Whisper model from Hugging Face (a one-time download per chosen size). The model file lives in your app's container. You can delete it from Settings at any time.</li>
       </ul>
 
-      <h2 id="retention">Retention &amp; deletion</h2>
+      <h2 id="not-collected">What we don't collect</h2>
+      <p>SpoknLabs does <strong>not</strong> collect, transmit, store, or have any access to:</p>
       <ul>
-        <li>Audio files are <strong>temporary</strong> — written to the app's temp directory during recording and deleted immediately after the transcript is delivered or after a failed attempt is abandoned.</li>
-        <li>Transcripts are held <strong>in memory only</strong> for the duration of the app session plus the most recent one (shown in the in-app "Copy again" card). They are not archived, synced, or written to persistent storage.</li>
-        <li>No user accounts. No server-side records. Spokn has no backend.</li>
-        <li>Your OpenAI API key is stored locally in the <strong>iOS Keychain</strong>. Spokn does not transmit or inspect it beyond using it as the Bearer token in the transcription request.</li>
+        <li>Your audio recordings.</li>
+        <li>Your transcripts.</li>
+        <li>Your OpenAI API key.</li>
+        <li>Device or advertising identifiers (IDFA, IDFV, advertising ID).</li>
+        <li>Usage analytics, telemetry, or product metrics.</li>
+        <li>Crash reports or diagnostic logs (beyond Apple's standard, which you opt into device-wide in iOS / macOS Settings → Privacy &amp; Security → Analytics &amp; Improvements; SpoknLabs cannot read those reports).</li>
+        <li>Contact info, location, photos, calendar, or any other personal data.</li>
       </ul>
+      <p>There is no SpoknLabs SDK, server, or third-party tracker bundled in the app.</p>
 
       <h2 id="third-parties">Third-party processors</h2>
+      <p><strong>OpenAI</strong> is the only third party that ever receives any of your data, and only when you have configured the OpenAI engine and a transcription is routed online. In that case, your audio file, optional vocabulary hint, and optional language code are sent to OpenAI directly from your device. The connection is authenticated with your own OpenAI API key.</p>
+      <p>Because the request is made under your own OpenAI account, OpenAI's handling of that data is governed by OpenAI's policies — not ours. Specifically:</p>
       <ul>
-        <li><strong>OpenAI</strong> — only when Online mode is active or Auto mode routes online. Audio and text fields are sent as documented in OpenAI's API reference. Retention and use are governed by <a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI's own API data policies</a> (API data is not used to train models by default).</li>
+        <li><a href="https://openai.com/policies/privacy-policy" rel="noopener">OpenAI Privacy Policy</a></li>
+        <li><a href="https://openai.com/policies/api-data-usage-policies" rel="noopener">OpenAI API data usage policies</a> — these state that, by default, OpenAI does not use API inputs or outputs to train its models.</li>
       </ul>
+      <p>If you only ever use the Local engine, no data is ever sent to OpenAI from Spokn.</p>
 
-      <h2 id="your-rights">Your rights</h2>
+      <h2 id="permissions">Permissions Spokn requests</h2>
+      <p>Spokn requests only the system permissions it strictly needs to do dictation. Each is explained at the moment Spokn asks for it.</p>
       <ul>
-        <li>Because Spokn holds no server-side data, there's no account to delete. Uninstalling the app removes all local state — Keychain entries, UserDefaults, and any downloaded on-device model.</li>
-        <li>To revoke the OpenAI path, delete your API key in Settings. To revoke the on-device path, delete any downloaded model in Settings.</li>
+        <li><strong>Microphone</strong> (iPhone &amp; Mac) — required to record audio while you dictate. Spokn captures audio only while you are holding the dictation key.</li>
+        <li><strong>Input Monitoring</strong> (Mac only) — required so Spokn can detect the Globe / Fn key being held as a global shortcut. Spokn registers a listen-only event tap and never injects key events through this channel.</li>
+        <li><strong>Accessibility</strong> (Mac only, optional) — used so Spokn can paste the transcript into the focused text field for you. If you decline this permission, Spokn falls back to copying the transcript to your clipboard.</li>
+        <li><strong>Launch at login</strong> (Mac only, optional) — registers Spokn as a Login Item if you toggle this on. Disabling it unregisters Spokn cleanly.</li>
       </ul>
+      <p>Spokn does not request location, contacts, photos, calendars, reminders, health data, or screen recording.</p>
+
+      <h2 id="your-rights">Your rights &amp; how to delete your data</h2>
+      <p>Because SpoknLabs holds no server-side data about you, there is no SpoknLabs account to close and no record on our side to request, correct, or delete. You are in full control of the data Spokn handles, and you can remove it at any time:</p>
+      <ul>
+        <li><strong>Stop the OpenAI path.</strong> Delete your OpenAI API key in Spokn → Settings.</li>
+        <li><strong>Stop the Local path.</strong> Delete the on-device model in Spokn → Settings.</li>
+        <li><strong>Remove everything Spokn has stored.</strong> Uninstall the app. iOS and macOS remove the app's Keychain entries, sandbox container (settings, downloaded models, any temp files), and Login Item registration with the app.</li>
+      </ul>
+      <p>If you are in the EU, UK, California, or another jurisdiction with statutory rights to access, correction, deletion, or portability — those rights apply. Because we hold no personal data on our side, we cannot provide a server-side export or deletion. If you have a question about your rights, email <a href="mailto:hello@spoknlabs.com">hello@spoknlabs.com</a> and we will respond within 30 days.</p>
+
+      <h2 id="children">Children's privacy</h2>
+      <p>Spokn is a general-audience productivity utility and is not directed at children under 13. We do not knowingly collect personal data from children. If you believe a child has provided personal data to SpoknLabs (e.g. by emailing us), please contact <a href="mailto:hello@spoknlabs.com">hello@spoknlabs.com</a> and we will delete the message.</p>
+
+      <h2 id="changes">Changes to this policy</h2>
+      <p>We may update this policy when Spokn's data practices change — for example, when a new platform or transcription engine is added. The "Last updated" date at the top of this page reflects the most recent change. For material changes (anything that affects what data Spokn handles, where it goes, or who can access it), we will also note the change in the app's release notes.</p>
 
       <h2 id="contact">Contact</h2>
-      <p>Questions about privacy? Email <a href="mailto:hello@spoknlabs.com">hello@spoknlabs.com</a>. See the <a href="/support/">Support page</a> for more ways to get in touch.</p>
-
-      <p style="margin-top: 48px; font-size: 13px; color: var(--text-faint);">This page will be updated when the Spokn app's data practices change. Material changes will be reflected in the "Last updated" date above.</p>
+      <p>SpoknLabs is a small indie studio. The fastest way to reach us is by email at <a href="mailto:hello@spoknlabs.com">hello@spoknlabs.com</a>. See the <a href="/support/">Support page</a> for more details.</p>
     </article>
   </main>
 
