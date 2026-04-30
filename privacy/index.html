@@ -85,7 +85,7 @@
       <h2 id="what-spokn-processes">What Spokn processes</h2>
       <p>While you use Spokn, the app handles the following on your device:</p>
       <ul>
-        <li><strong>Audio recordings</strong> captured via your microphone while you hold the dictation key.</li>
+        <li><strong>Audio recordings</strong> captured via your microphone while a dictation session is active.</li>
         <li><strong>Transcribed text</strong> returned by the active transcription engine.</li>
         <li><strong>Vocabulary hint</strong> — an optional list of names, jargon, or phrases you save in Settings. When the OpenAI engine is active, it is sent alongside your audio so the engine can spell unusual words correctly.</li>
         <li><strong>Language preference</strong> — an optional ISO-639-1 language code you pick in Settings.</li>
@@ -140,8 +140,8 @@
       <h2 id="permissions">Permissions Spokn requests</h2>
       <p>Spokn requests only the system permissions it strictly needs to do dictation. Each is explained at the moment Spokn asks for it.</p>
       <ul>
-        <li><strong>Microphone</strong> (iPhone &amp; Mac) — required to record audio while you dictate. Spokn captures audio only while you are holding the dictation key.</li>
-        <li><strong>Input Monitoring</strong> (Mac only) — required so Spokn can detect the Globe / Fn key being held as a global shortcut. Spokn registers a listen-only event tap and never injects key events through this channel.</li>
+        <li><strong>Microphone</strong> (iPhone &amp; Mac) — required to record audio while you dictate. Spokn captures audio only while a dictation session is active (started and stopped by you, via the in-app button or your configured shortcut).</li>
+        <li><strong>Input Monitoring</strong> (Mac only) — required so Spokn can detect the Globe / Fn key as a global shortcut to start and stop dictation. Spokn registers a listen-only event tap and never injects key events through this channel.</li>
         <li><strong>Accessibility</strong> (Mac only, optional) — used so Spokn can paste the transcript into the focused text field for you. If you decline this permission, Spokn falls back to copying the transcript to your clipboard.</li>
         <li><strong>Launch at login</strong> (Mac only, optional) — registers Spokn as a Login Item if you toggle this on. Disabling it unregisters Spokn cleanly.</li>
       </ul>
