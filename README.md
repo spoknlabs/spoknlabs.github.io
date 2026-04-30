@@ -91,7 +91,7 @@ The site is configured for `https://spoknlabs.github.io/` — a GitHub organizat
 
 Remember to update the **"Last updated"** date at the top of `privacy/` and `terms/` when you change their content.
 
-**Contact email.** Default is `hello@spoknlabs.com`. Search for it across files and replace if yours differs.
+**Contact email.** Default is `spoknlabs@gmail.com`. Search for it across files and replace if yours differs.
 
 **Design tokens** (colors, radii, motion). All CSS custom properties are declared at the top of [assets/css/styles.css](assets/css/styles.css). Change them there once; the rest of the site follows.
 
