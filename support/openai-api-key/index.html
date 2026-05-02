@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>How to create an OpenAI API key for Spokn — SpoknLabs</title>
+  <meta name="description" content="A short, friendly walkthrough: create an OpenAI API key and paste it into Spokn. Your key stays on your device, in Apple Keychain.">
+  <link rel="canonical" href="https://spoknlabs.github.io/support/openai-api-key/">
+  <meta name="theme-color" content="#0A0B0F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="How to create an OpenAI API key for Spokn">
+  <meta property="og:description" content="A short walkthrough: create an OpenAI API key and paste it into Spokn.">
+  <meta property="og:url" content="https://spoknlabs.github.io/support/openai-api-key/">
+  <meta property="og:image" content="https://spoknlabs.github.io/assets/images/og-default.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="SpoknLabs home">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>SpoknLabs</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#apps">Apps</a>
+        <a href="/support/" aria-current="page">Support</a>
+        <a href="/faq/">FAQ</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container doc">
+      <span class="eyebrow">Spokn · Help</span>
+      <h1>How to create an OpenAI API key for Spokn</h1>
+      <p style="color: var(--text-dim); font-size: 17px; line-height: 1.6; margin-bottom: 28px;">Spokn works best with your own OpenAI key. The key stays on your device, in Apple Keychain. This page walks you through getting one and pasting it into Spokn — it usually takes a couple of minutes.</p>
+
+      <div class="hero-actions" style="margin-bottom: 8px;">
+        <a href="https://platform.openai.com/api-keys" rel="noopener" class="btn btn-primary">Open OpenAI Platform</a>
+        <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
+      </div>
+
+      <nav class="doc-toc" aria-label="On this page">
+        <span class="eyebrow">On this page</span>
+        <ul>
+          <li><a href="#why">Why Spokn asks for a key</a></li>
+          <li><a href="#before">Before you start</a></li>
+          <li><a href="#steps">Step-by-step</a></li>
+          <li><a href="#notes">Important notes</a></li>
+          <li><a href="#billing">Billing</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="why">Why Spokn asks for a key</h2>
+      <p>Using your own OpenAI key gives you the best transcription Spokn can offer. In particular:</p>
+      <ul>
+        <li>Better results for longer dictations.</li>
+        <li>Better handling of noisy audio.</li>
+        <li>Better mixed-language transcription.</li>
+        <li>Your key is stored locally on your device, in Apple Keychain. Spokn never sees it on any server, because there is no Spokn server.</li>
+      </ul>
+
+      <h2 id="before">Before you start</h2>
+      <ul>
+        <li>You'll need an OpenAI account. If you don't have one yet, you can create it during the steps below.</li>
+        <li>OpenAI charges for transcription usage, billed directly to your OpenAI account. SpoknLabs is not part of that.</li>
+        <li>You can keep using Spokn without a key — it falls back to on-device transcription. Quality and behavior differ.</li>
+      </ul>
+
+      <h2 id="steps">Step-by-step</h2>
+      <ol style="color: var(--text-dim); padding-left: 22px; margin-bottom: 16px; line-height: 1.65;">
+        <li style="margin-bottom: 14px;"><strong>Open the OpenAI platform.</strong> Go to <a href="https://platform.openai.com/api-keys" rel="noopener">platform.openai.com/api-keys</a>.</li>
+        <li style="margin-bottom: 14px;"><strong>Sign in or create an account.</strong> If this is your first time, follow the prompts to make a free OpenAI account. Then return to the API keys page.</li>
+        <li style="margin-bottom: 14px;"><strong>Create a new key.</strong> Click <em>Create new secret key</em>. You can give it any name — something like "Spokn" makes it easy to recognize later.</li>
+        <li style="margin-bottom: 14px;"><strong>Copy the key right away.</strong> OpenAI shows the full key only once. Tap the copy button next to the key. If you close the window before copying, you'll need to create a new one — the old one can't be shown again.</li>
+        <li style="margin-bottom: 14px;"><strong>Open Spokn.</strong> Go to <em>Settings → OpenAI → API key</em>.</li>
+        <li style="margin-bottom: 14px;"><strong>Paste and save.</strong> Paste the key into the field and confirm. That's it — Spokn will start using it for online transcription.</li>
+      </ol>
+
+      <h2 id="notes">Important notes</h2>
+      <ul>
+        <li>Treat the key like a password. Don't share it or paste it into other apps you don't trust.</li>
+        <li>If the key ever stops working — for example, if you regenerated or revoked it on OpenAI's side — just create a new one and paste it into Spokn again.</li>
+        <li>You can remove the key at any time from <em>Spokn → Settings → OpenAI → API key</em>. Removing it deletes it from your device's Keychain immediately.</li>
+      </ul>
+
+      <h2 id="billing">Billing</h2>
+      <p>OpenAI may charge for transcription usage at their current rates. Pricing can change over time, and rate limits, free credits, and billing settings are all managed in your OpenAI account — not in Spokn. For the latest pricing and your usage history, sign in to <a href="https://platform.openai.com/" rel="noopener">platform.openai.com</a>.</p>
+
+      <h2 id="privacy">Privacy</h2>
+      <ul>
+        <li>Your API key is stored on your device, in Apple Keychain. Spokn does not send it anywhere except OpenAI, as part of the transcription request.</li>
+        <li>Spokn does not create an OpenAI account for you, and does not share your account details with anyone.</li>
+        <li>When you use OpenAI transcription, the audio for that one request is sent to OpenAI for processing. By default, OpenAI does not use API audio to train its models. See our <a href="/privacy/">Privacy Policy</a> for the full picture.</li>
+      </ul>
+
+      <h2 id="faq">FAQ</h2>
+
+      <h3>Where do I create the key?</h3>
+      <p>On OpenAI's website, at <a href="https://platform.openai.com/api-keys" rel="noopener">platform.openai.com/api-keys</a>. You'll need to be signed in to your OpenAI account.</p>
+
+      <h3>Why does Spokn need <em>my</em> own key?</h3>
+      <p>So that there's no middleman. The transcription request goes directly from your device to OpenAI under your account. SpoknLabs never sees the audio, the transcript, or the key.</p>
+
+      <h3>What if I don't want to use OpenAI?</h3>
+      <p>Spokn also has an on-device engine that runs entirely offline — no key, no network. You can switch to it in <em>Settings</em>. Quality differs from OpenAI's engine, especially on longer or noisier recordings.</p>
+
+      <h3>How do I remove or replace the key?</h3>
+      <p>Open <em>Spokn → Settings → OpenAI → API key</em>. You can clear the saved key, or paste a new one to replace it. Clearing it removes it from your device's Keychain immediately.</p>
+
+      <div class="hero-actions" style="margin-top: 40px;">
+        <a href="https://platform.openai.com/api-keys" rel="noopener" class="btn btn-primary">Open OpenAI Platform</a>
+        <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>© SpoknLabs</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/apps/spokn/">Spokn</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/" aria-current="page">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
