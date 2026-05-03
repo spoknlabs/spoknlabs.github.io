@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Set up the Action Button for Spokn — SpoknLabs</title>
+  <meta name="description" content="On iPhone 15 Pro and newer, trigger Spokn dictation with a single press of the Action Button. Step-by-step setup and troubleshooting.">
+  <link rel="canonical" href="https://spoknlabs.github.io/support/action-button-setup/">
+  <meta name="theme-color" content="#0A0B0F" media="(prefers-color-scheme: dark)">
+  <meta name="theme-color" content="#FAFAF9" media="(prefers-color-scheme: light)">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Set up the Action Button for Spokn">
+  <meta property="og:description" content="Trigger Spokn dictation with one press of the iPhone Action Button.">
+  <meta property="og:url" content="https://spoknlabs.github.io/support/action-button-setup/">
+  <meta property="og:image" content="https://spoknlabs.github.io/assets/images/og-default.svg">
+
+  <link rel="icon" type="image/svg+xml" href="/assets/images/favicon.svg">
+  <link rel="apple-touch-icon" href="/assets/images/favicon.svg">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  <script src="/assets/js/main.js" defer></script>
+</head>
+<body>
+  <header class="nav">
+    <div class="container nav-inner">
+      <a href="/" class="nav-brand" aria-label="SpoknLabs home">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>SpoknLabs</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <a href="/#apps">Apps</a>
+        <a href="/support/" aria-current="page">Support</a>
+        <a href="/faq/">FAQ</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle theme">
+          <svg class="icon-dark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-light" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <article class="container doc">
+      <span class="eyebrow">Spokn · Help</span>
+      <h1>Set up the Action Button for Spokn</h1>
+      <p style="color: var(--text-dim); font-size: 17px; line-height: 1.6; margin-bottom: 28px;">On iPhone 15 Pro and newer, you can start and stop Spokn with a single press of the Action Button — the small button just above the volume buttons. The whole setup takes about a minute.</p>
+
+      <div class="hero-actions" style="margin-bottom: 8px;">
+        <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
+      </div>
+
+      <nav class="doc-toc" aria-label="On this page">
+        <span class="eyebrow">On this page</span>
+        <ul>
+          <li><a href="#before">Before you start</a></li>
+          <li><a href="#install">Install the Spokn shortcut</a></li>
+          <li><a href="#assign">Assign it to the Action Button</a></li>
+          <li><a href="#use">Use it</a></li>
+          <li><a href="#troubleshoot">Troubleshooting: opens but doesn't record</a></li>
+        </ul>
+      </nav>
+
+      <h2 id="before">Before you start</h2>
+      <ul>
+        <li>You need an iPhone with an Action Button — that's iPhone 15 Pro, iPhone 15 Pro Max, and any newer Pro / Pro Max model.</li>
+        <li>Spokn must be installed and opened at least once. The first launch is what registers Spokn's shortcut with iOS.</li>
+        <li>Spokn needs microphone permission. If you skipped that prompt, you can enable it later in <em>iPhone Settings → Spokn → Microphone</em>.</li>
+      </ul>
+
+      <h2 id="install">Install the Spokn shortcut</h2>
+      <p>You don't have to install anything by hand. Once Spokn is on your phone and you've opened it once, iOS automatically picks up the Spokn shortcut and makes it available everywhere shortcuts can run — including the Action Button.</p>
+      <p>To confirm it's there:</p>
+      <ol style="color: var(--text-dim); padding-left: 22px; margin-bottom: 16px; line-height: 1.65;">
+        <li style="margin-bottom: 10px;">Open the <strong>Shortcuts</strong> app on your iPhone.</li>
+        <li style="margin-bottom: 10px;">Tap <strong>App Shortcuts</strong> at the top.</li>
+        <li style="margin-bottom: 10px;">Look for the <strong>Spokn</strong> section. You should see an entry called <em>Spokn — Start Dictation</em> (or similar).</li>
+      </ol>
+      <p>If you don't see it, open Spokn once and try again — iOS sometimes needs a moment to register newly installed app shortcuts.</p>
+
+      <h2 id="assign">Assign it to the Action Button</h2>
+      <ol style="color: var(--text-dim); padding-left: 22px; margin-bottom: 16px; line-height: 1.65;">
+        <li style="margin-bottom: 14px;">Open <strong>iPhone Settings</strong>.</li>
+        <li style="margin-bottom: 14px;">Tap <strong>Action Button</strong>.</li>
+        <li style="margin-bottom: 14px;">Swipe through the row of modes (Silent, Focus, Camera, Flashlight, etc.) until you reach <strong>Shortcut</strong>.</li>
+        <li style="margin-bottom: 14px;">Tap <strong>Choose a Shortcut</strong>.</li>
+        <li style="margin-bottom: 14px;">Pick <em>Spokn — Start Dictation</em> from the list. You can search for "Spokn" if it's not visible right away.</li>
+        <li style="margin-bottom: 14px;">Leave Settings. The choice is saved automatically.</li>
+      </ol>
+
+      <h2 id="use">Use it</h2>
+      <ul>
+        <li><strong>Press the Action Button</strong> to start a dictation session.</li>
+        <li><strong>Press it again</strong> to stop. Spokn transcribes what you said and copies the text to your clipboard.</li>
+        <li>The first time you do this, iOS may ask you to confirm running the shortcut. Tap <em>Always Allow</em> so it doesn't ask again.</li>
+      </ul>
+
+      <h2 id="troubleshoot">Troubleshooting: Action Button opens Spokn but doesn't record</h2>
+      <p>If pressing the button brings up Spokn but no recording starts, run through these checks in order:</p>
+      <ol style="color: var(--text-dim); padding-left: 22px; margin-bottom: 16px; line-height: 1.65;">
+        <li style="margin-bottom: 12px;"><strong>Microphone permission.</strong> Open <em>iPhone Settings → Spokn → Microphone</em> and make sure it's on. Without this, Spokn can launch but cannot capture audio.</li>
+        <li style="margin-bottom: 12px;"><strong>Right shortcut selected.</strong> Open <em>iPhone Settings → Action Button → Shortcut</em> and confirm it shows <em>Spokn — Start Dictation</em> and not a different shortcut.</li>
+        <li style="margin-bottom: 12px;"><strong>"Always Allow" the shortcut.</strong> If iOS is still showing a confirmation prompt each time, tap <em>Always Allow</em> when it appears so the shortcut runs without interruption.</li>
+        <li style="margin-bottom: 12px;"><strong>Open Spokn once, manually.</strong> If you've just installed Spokn or recently updated it, launching the app once helps iOS finish registering the shortcut.</li>
+        <li style="margin-bottom: 12px;"><strong>Restart the phone.</strong> Rare, but iOS occasionally loses track of an Action Button binding. A reboot reliably fixes that.</li>
+        <li style="margin-bottom: 12px;"><strong>Re-pick the shortcut.</strong> In <em>Settings → Action Button</em>, switch to a different mode, then back to <em>Shortcut</em> and re-select <em>Spokn — Start Dictation</em>.</li>
+      </ol>
+      <p>Still stuck? Email <a href="mailto:spoknlabs@gmail.com">spoknlabs@gmail.com</a> with your iPhone model, iOS version, and Spokn version (visible in <em>Spokn → Settings</em>). It makes the fix much faster.</p>
+
+      <div class="hero-actions" style="margin-top: 40px;">
+        <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
+      </div>
+    </article>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <svg class="glyph" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+          <circle cx="50" cy="50" r="31" stroke="currentColor" stroke-width="3" opacity="0.5"/>
+          <circle cx="50" cy="50" r="21" stroke="currentColor" stroke-width="4" opacity="0.85"/>
+          <circle cx="50" cy="50" r="9" fill="#FF5A4A"/>
+        </svg>
+        <span>© SpoknLabs</span>
+      </div>
+      <nav class="footer-links" aria-label="Footer">
+        <a href="/apps/spokn/">Spokn</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/terms/">Terms</a>
+        <a href="/support/" aria-current="page">Support</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>
