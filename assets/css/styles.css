@@ -474,14 +474,14 @@ section { padding-block: clamp(56px, 9vw, 100px); }
 .doc ul ul { margin-top: 6px; margin-bottom: 6px; }
 .doc li { margin-bottom: 6px; }
 
-.doc a {
+.doc a:not(.btn) {
   color: var(--signal);
   text-decoration: underline;
   text-underline-offset: 3px;
   text-decoration-thickness: 1px;
   transition: color 180ms var(--ease-in-out);
 }
-.doc a:hover { color: var(--coral); }
+.doc a:not(.btn):hover { color: var(--coral); }
 
 .doc strong { color: var(--text); font-weight: 600; }
 
