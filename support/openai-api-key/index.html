@@ -53,7 +53,7 @@
       <div class="card" style="margin: 0 0 24px; background: var(--bg-card-2);">
         <span class="eyebrow" style="display: inline-block; margin-bottom: 12px;">Quick steps</span>
         <ol style="padding-left: 22px; margin: 0; color: var(--text-dim); line-height: 1.65;">
-          <li style="margin-bottom: 6px;">Create or sign in to your <a href="https://platform.openai.com/" rel="noopener" style="color: var(--signal); text-decoration: underline; text-underline-offset: 3px;">OpenAI account</a>.</li>
+          <li style="margin-bottom: 6px;">Create or sign in to your <a href="https://platform.openai.com/" target="_blank" rel="noopener" style="color: var(--signal); text-decoration: underline; text-underline-offset: 3px;">OpenAI account</a>.</li>
           <li style="margin-bottom: 6px;">Add a credit or debit card and at least <strong>$5</strong> of credit.</li>
           <li style="margin-bottom: 6px;">Create a new API key and copy it right away.</li>
           <li style="margin-bottom: 0;">Paste it into <em>Spokn → Settings → OpenAI → API key</em>.</li>
@@ -61,43 +61,24 @@
       </div>
 
       <div class="hero-actions" style="margin-bottom: 8px;">
-        <a href="https://platform.openai.com/api-keys" rel="noopener" class="btn btn-primary">Create your API key on OpenAI</a>
+        <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener" class="btn btn-primary">Create your API key on OpenAI</a>
         <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
       </div>
 
       <nav class="doc-toc" aria-label="On this page">
         <span class="eyebrow">On this page</span>
         <ul>
-          <li><a href="#why">Why Spokn asks for a key</a></li>
-          <li><a href="#before">Before you start</a></li>
           <li><a href="#steps">Step-by-step</a></li>
-          <li><a href="#notes">Important notes</a></li>
           <li><a href="#payment">Payment &amp; credits</a></li>
+          <li><a href="#tips">Tips &amp; safety</a></li>
           <li><a href="#privacy">Privacy</a></li>
           <li><a href="#faq">FAQ</a></li>
         </ul>
       </nav>
 
-      <h2 id="why">Why Spokn asks for a key</h2>
-      <p>Using your own OpenAI key gives you the best transcription Spokn can offer. In particular:</p>
-      <ul>
-        <li>Better results for longer dictations.</li>
-        <li>Better handling of noisy audio.</li>
-        <li>Better mixed-language transcription.</li>
-        <li>Your key is stored locally on your device, in Apple Keychain. Spokn never sees it on any server, because there is no Spokn server.</li>
-      </ul>
-
-      <h2 id="before">Before you start</h2>
-      <ul>
-        <li>You'll need an OpenAI account. If you don't have one yet, you can create it during the steps below.</li>
-        <li>OpenAI uses prepaid billing. You'll add a credit or debit card and a small starting balance — the minimum is <strong>$5</strong>. Without that, the key exists but won't actually work.</li>
-        <li>OpenAI charges for transcription usage, billed directly to your OpenAI account. SpoknLabs is not part of that.</li>
-        <li>You can keep using Spokn without a key — it falls back to on-device transcription. Quality and behavior differ.</li>
-      </ul>
-
       <h2 id="steps">Step-by-step</h2>
       <ol style="color: var(--text-dim); padding-left: 22px; margin-bottom: 16px; line-height: 1.65;">
-        <li style="margin-bottom: 14px;"><strong>Open the OpenAI platform.</strong> Go to <a href="https://platform.openai.com/api-keys" rel="noopener">platform.openai.com/api-keys</a>.</li>
+        <li style="margin-bottom: 14px;"><strong>Open the OpenAI platform.</strong> Go to <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com/api-keys</a>.</li>
         <li style="margin-bottom: 14px;"><strong>Sign in or create an account.</strong> If this is your first time, follow the prompts to make a free OpenAI account. Then return to the API keys page.</li>
         <li style="margin-bottom: 14px;"><strong>Add a payment method and a starting balance.</strong> On the same site, open <em>Settings → Billing</em>. Add a credit or debit card under <em>Payment methods</em>, then click <em>Add to balance</em> and add some credit — the minimum is $5. Without this, the API key won't work. See <a href="#payment">Payment &amp; credits</a> below for the options.</li>
         <li style="margin-bottom: 14px;"><strong>Create a new key.</strong> Back on the <em>API keys</em> page, click <em>Create new secret key</em>. You can give it any name — something like "Spokn" makes it easy to recognize later.</li>
@@ -105,13 +86,6 @@
         <li style="margin-bottom: 14px;"><strong>Open Spokn.</strong> Go to <em>Settings → OpenAI → API key</em>.</li>
         <li style="margin-bottom: 14px;"><strong>Paste and save.</strong> Paste the key into the field and confirm. That's it — Spokn will start using it for online transcription.</li>
       </ol>
-
-      <h2 id="notes">Important notes</h2>
-      <ul>
-        <li>Treat the key like a password. Don't share it or paste it into other apps you don't trust.</li>
-        <li>If the key ever stops working — for example, if you regenerated or revoked it on OpenAI's side — just create a new one and paste it into Spokn again.</li>
-        <li>You can remove the key at any time from <em>Spokn → Settings → OpenAI → API key</em>. Removing it deletes it from your device's Keychain immediately.</li>
-      </ul>
 
       <h2 id="payment">Payment &amp; credits</h2>
       <p>OpenAI uses a prepaid model: you add credit up front, and each transcription request draws against that balance. Quick reference:</p>
@@ -122,7 +96,14 @@
         <li><strong>Monthly budget (optional, recommended).</strong> A hard cap on how much OpenAI will let you spend per month. If you ever hit it, requests stop until the next month — a simple safety net.</li>
         <li><strong>Credit lifetime.</strong> Purchased credits expire after one year and aren't refundable.</li>
       </ul>
-      <p>Pricing can change over time. For the current rate, your usage history, and the state of your balance, sign in to <a href="https://platform.openai.com/settings/organization/billing/overview" rel="noopener">your OpenAI billing page</a>.</p>
+      <p>Pricing can change over time. For the current rate, your usage history, and the state of your balance, sign in to <a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank" rel="noopener">your OpenAI billing page</a>.</p>
+
+      <h2 id="tips">Tips &amp; safety</h2>
+      <ul>
+        <li>Treat the key like a password. Don't share it or paste it into other apps you don't trust.</li>
+        <li>If the key ever stops working — for example, if you regenerated or revoked it on OpenAI's side — just create a new one and paste it into Spokn again.</li>
+        <li>You can remove the key at any time from <em>Spokn → Settings → OpenAI → API key</em>. Removing it deletes it from your device's Keychain immediately.</li>
+      </ul>
 
       <h2 id="privacy">Privacy</h2>
       <ul>
@@ -134,10 +115,10 @@
       <h2 id="faq">FAQ</h2>
 
       <h3>Where do I create the key?</h3>
-      <p>On OpenAI's website, at <a href="https://platform.openai.com/api-keys" rel="noopener">platform.openai.com/api-keys</a>. You'll need to be signed in to your OpenAI account.</p>
+      <p>On OpenAI's website, at <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener">platform.openai.com/api-keys</a>. You'll need to be signed in to your OpenAI account.</p>
 
       <h3>Why does Spokn need <em>my</em> own key?</h3>
-      <p>So that there's no middleman. The transcription request goes directly from your device to OpenAI under your account. SpoknLabs never sees the audio, the transcript, or the key.</p>
+      <p>So that there's no middleman. The transcription request goes directly from your device to OpenAI under your account. SpoknLabs never sees the audio, the transcript, or the key. Using your own key also gives you better results on longer dictations, noisy audio, and mixed-language input.</p>
 
       <h3>What if I don't want to use OpenAI?</h3>
       <p>Spokn also has an on-device engine that runs entirely offline — no key, no network. You can switch to it in <em>Settings</em>. Quality differs from OpenAI's engine, especially on longer or noisier recordings.</p>
@@ -149,10 +130,10 @@
       <p>OpenAI charges for each transcription. Without a payment method and at least $5 of credit on your account, the key exists but won't actually work — requests get rejected. Once you've topped up, dictation just works.</p>
 
       <h3>How much will Spokn cost me at OpenAI?</h3>
-      <p>For most people, very little — transcription is one of OpenAI's cheaper APIs, and Spokn only sends audio for the moments you're actually dictating. The exact rate is set by OpenAI and may change over time; you can find the current price on <a href="https://openai.com/api/pricing/" rel="noopener">OpenAI's pricing page</a>. Setting a Monthly budget on OpenAI's side is the simplest way to keep spending predictable.</p>
+      <p>For most people, very little — transcription is one of OpenAI's cheaper APIs, and Spokn only sends audio for the moments you're actually dictating. The exact rate is set by OpenAI and may change over time; you can find the current price on <a href="https://openai.com/api/pricing/" target="_blank" rel="noopener">OpenAI's pricing page</a>. Setting a Monthly budget on OpenAI's side is the simplest way to keep spending predictable.</p>
 
       <div class="hero-actions" style="margin-top: 40px;">
-        <a href="https://platform.openai.com/api-keys" rel="noopener" class="btn btn-primary">Create your API key on OpenAI</a>
+        <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener" class="btn btn-primary">Create your API key on OpenAI</a>
         <a href="/support/" class="btn btn-secondary">Back to Spokn Support</a>
       </div>
     </article>
