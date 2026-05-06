@@ -245,6 +245,7 @@ section { padding-block: clamp(56px, 9vw, 100px); }
 @media (max-width: 640px) {
   .nav-links { gap: 14px; }
   .nav-links a:not(.nav-cta) { display: none; }
+  .download-card { padding: 24px; }
 }
 
 /* ---------- Hero ---------- */
@@ -421,6 +422,32 @@ section { padding-block: clamp(56px, 9vw, 100px); }
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+}
+
+/* ---------- Download card ---------- */
+.download-card {
+  padding: 32px;
+  background:
+    radial-gradient(circle at top right, color-mix(in srgb, var(--signal) 16%, transparent), transparent 34%),
+    var(--bg-card);
+}
+
+.download-card-copy {
+  display: grid;
+  gap: 10px;
+}
+
+.download-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.download-note {
+  margin-top: 18px;
+  font-size: 14px;
+  color: var(--text-faint);
 }
 
 /* ---------- Value cards ---------- */
