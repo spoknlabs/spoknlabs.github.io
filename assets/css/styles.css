@@ -425,7 +425,14 @@ section { padding-block: clamp(56px, 9vw, 100px); }
 }
 
 /* ---------- Download card ---------- */
+.download-grid {
+  align-items: stretch;
+}
+
 .download-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 32px;
   background:
     radial-gradient(circle at top right, color-mix(in srgb, var(--signal) 16%, transparent), transparent 34%),
@@ -435,6 +442,7 @@ section { padding-block: clamp(56px, 9vw, 100px); }
 .download-card-copy {
   display: grid;
   gap: 10px;
+  flex: 1;
 }
 
 .download-meta {
