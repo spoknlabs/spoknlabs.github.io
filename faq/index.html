@@ -60,11 +60,11 @@
         <div class="faq-list">
           <details class="faq-item">
             <summary>Does Spokn work offline?</summary>
-            <div class="faq-body">Yes. Set the transcription mode to <strong>Local only</strong> (or leave it on <strong>Auto</strong>, which uses the on-device engine when you have no network). Audio never leaves your iPhone in either of those paths.</div>
+            <div class="faq-body">Yes. Spokn can use its on-device fallback when it's ready, so dictation can stay on your iPhone even without a network connection.</div>
           </details>
           <details class="faq-item">
             <summary>Do I need an OpenAI API key?</summary>
-            <div class="faq-body">Only if you want to use the OpenAI engine. In <strong>Local only</strong> mode, Spokn uses an on-device model and needs no key. If you're in <strong>Auto</strong> or <strong>Online only</strong> mode, you'll add a key in Settings, and it's used directly against OpenAI's API.</div>
+            <div class="faq-body">Only if you want OpenAI transcription. Spokn can also use its on-device fallback without a key. If you add a key in Settings, requests go directly from your device to OpenAI.</div>
           </details>
           <details class="faq-item">
             <summary>Where is my API key stored?</summary>
@@ -84,7 +84,7 @@
           </details>
           <details class="faq-item">
             <summary>How do I uninstall Spokn and remove all data?</summary>
-            <div class="faq-body">Delete the app from your iPhone. iOS removes the app's Keychain entries, UserDefaults, and any downloaded on-device model along with it. There's no server-side account to delete.</div>
+            <div class="faq-body">There's no server-side account to delete. If you want to clear local Spokn data first, remove your OpenAI API key and any downloaded on-device model in Spokn Settings, then uninstall the app.</div>
           </details>
         </div>
 

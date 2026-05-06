@@ -36,8 +36,8 @@ Privacy Policy must cover both paths honestly. When a recording is transcribed v
 - **OpenAI** — only when Online mode is active or Auto mode routes online. Audio and text fields are sent as documented in OpenAI's API reference. Retention and use are governed by OpenAI's own API data policies (API data is not used to train models by default); link out to OpenAI's policy.
 
 ### User rights
-- Since Spokn holds no server-side data, there's no account to delete. Uninstalling the app removes all local state (Keychain, UserDefaults, any downloaded on-device model).
-- To revoke the OpenAI path, the user deletes their API key in Settings. To revoke the on-device path, they delete any downloaded model in Settings.
+- Since Spokn holds no server-side data, there's no account to delete.
+- To clear local Spokn data, the user should delete their API key and any downloaded on-device model in Settings before uninstalling.
 
 ### Contact
 - A support/privacy contact email (reuse the general SpoknLabs contact channel from `support`).

@@ -445,21 +445,8 @@ section { padding-block: clamp(56px, 9vw, 100px); }
   flex: 1;
 }
 
-.download-meta {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 12px;
-}
-
 .download-actions {
   margin-top: 24px;
-}
-
-.download-note {
-  margin-top: 18px;
-  font-size: 14px;
-  color: var(--text-faint);
 }
 
 /* ---------- Value cards ---------- */
